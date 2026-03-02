@@ -34,6 +34,13 @@ document.querySelectorAll('#navmenu a').forEach(navmenu => {
   });
 });
 
+  const counter = document.getElementById("crazy-counter");
+
+setInterval(() => {
+  const randomNumber = Math.floor(Math.random() * 1000);
+  counter.textContent = randomNumber.toLocaleString();
+}, 1000);
+
 
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
     navmenu.addEventListener('click', function(e) {
@@ -202,5 +209,6 @@ document.querySelectorAll('#navmenu a').forEach(navmenu => {
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
 
 })();
